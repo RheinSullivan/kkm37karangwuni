@@ -27,7 +27,7 @@ body {
   padding: 0.35em 0px;
 }
 .corus-img {
-  max-width: 75%;
+  max-width: 87%;
 }
 .carousel-control-prev-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ff0000'%3e%3cpath d='M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z'/%3e%3c/svg%3e");
@@ -38,6 +38,56 @@ body {
 .map {
   height: 100%;
   width: 100%;
+}
+.nav-item .a:hover {
+  color: black;
+}
+.navbar-nav .nav-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  display: block;
+  background: #fff;
+  transition: width 0.3s;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link.active::after {
+  width: 100%;
+}
+
+.navbar-nav .nav-link.active {
+  color: #fff !important;
+}
+.bttm-hov {
+  background: red;
+  color: white;
+}
+.bttm-hov:hover {
+  background: black;
+  color: white;
+}
+.nav-hov {
+  background: white;
+  color: #ff0000;
+  border-radius: 5rem;
+}
+.nav-hov:hover {
+  background: black;
+  color: white;
 }
 #faculty,
 .carousel-indicators [data-bs-target] {
