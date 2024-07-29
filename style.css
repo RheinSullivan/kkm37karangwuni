@@ -71,6 +71,7 @@ body {
 
 .navbar-nav .nav-link.active {
   color: #fff !important;
+  text-shadow: 3px 3px 3px #000;
 }
 .bttm-hov {
   background: red;
