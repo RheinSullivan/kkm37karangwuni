@@ -1,3 +1,7 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 section {
   padding-top: 9rem;
 }
@@ -47,7 +51,12 @@ body {
   display: inline-block;
   transition: color 0.3s ease;
 }
-
+.navbar-img {
+  width: 75px;
+}
+.profile-img {
+  width: 500px;
+}
 .navbar-nav .nav-link::after {
   content: "";
   position: absolute;
@@ -132,15 +141,22 @@ body {
   .navbar-brand {
     margin-left: 0;
   }
+  .navbar-img {
+    width: 55px;
+  }
   #scrollToTopBtn {
     padding: 5px 10px;
     font-weight: normal;
   }
-  .btn {
+  .btn,
+  .jumbotron-btn {
     margin-left: 3.3rem;
     margin-right: 3.3rem;
   }
   .corus-img {
     max-width: 100%;
+  }
+  .profile-img {
+    width: 300px;
   }
 }
