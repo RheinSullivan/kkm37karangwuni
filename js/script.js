@@ -1,3 +1,4 @@
+// Animation Active Navbar
 document.addEventListener("DOMContentLoaded", function () {
   const sections = document.querySelectorAll("section");
   const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
@@ -18,5 +19,44 @@ document.addEventListener("DOMContentLoaded", function () {
         link.classList.add("active");
       }
     });
+  });
+});
+// Bottom Music
+const audio = document.getElementById("audio");
+const playIcon = document.getElementById("play-icon");
+const pauseIcon = document.getElementById("pause-icon");
+const musicControl = document.getElementById("music-control");
+const musicTitle = document.getElementById("music-title");
+
+document.addEventListener("DOMContentLoaded", () => {
+  audio
+    .play()
+    .then(() => {
+      playIcon.classList.add("d-none");
+      pauseIcon.classList.remove("d-none");
+      musicTitle.style.display = "block";
+    })
+    .catch((error) => {
+      console.error("Autoplay was prevented:", error);
+    });
+
+  audio.addEventListener("play", () => {
+    playIcon.classList.add("d-none");
+    pauseIcon.classList.remove("d-none");
+    musicTitle.style.display = "block";
+  });
+
+  audio.addEventListener("pause", () => {
+    playIcon.classList.remove("d-none");
+    pauseIcon.classList.add("d-none");
+    musicTitle.style.display = "none";
+  });
+
+  musicControl.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
   });
 });

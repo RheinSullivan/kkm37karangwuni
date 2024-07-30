@@ -9,7 +9,6 @@ body {
   background: #d3d3d3;
 }
 .jumbotron {
-  padding-top: 10rem;
   background-image: url("https://umc.ac.id/wp-content/uploads/2023/07/IMG_6391-scaled.jpg");
   background-position: 50%;
   background-size: cover;
@@ -101,6 +100,31 @@ body {
   background: black;
   color: white;
 }
+#music-control {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+}
+#music-title {
+  position: fixed;
+  bottom: 26px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: none;
+  margin-left: 60px;
+}
 #faculty,
 .carousel-indicators [data-bs-target] {
   background-color: red;
@@ -112,7 +136,7 @@ body {
   display: none;
   position: fixed;
   bottom: 20px;
-  left: 20px;
+  right: 20px;
   background-color: #222222;
   color: #fff;
   border: none;
@@ -161,5 +185,9 @@ body {
   }
   .profile-img {
     width: 300px;
+  }
+  #music-title h6 {
+    bottom: 25px;
+    font-size: 2px;
   }
 }
