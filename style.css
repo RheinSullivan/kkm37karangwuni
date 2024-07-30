@@ -19,7 +19,10 @@ body {
 }
 .jumbotron-text,
 .corus {
-  text-shadow: 0px 0px 5px #000;
+  text-shadow: 0px 0px 4px #000;
+}
+.tanggal {
+  text-shadow: 0px 0px 0px #000;
 }
 .jumbotron-btn {
   text-shadow: 0px 0px 5px #ff0000;
