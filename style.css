@@ -71,7 +71,6 @@ body {
 
 .navbar-nav .nav-link.active {
   color: #fff !important;
-  text-shadow: 3px 3px 3px #000;
 }
 .bttm-hov {
   background: red;
@@ -101,7 +100,7 @@ body {
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 20px;
+  left: 20px;
   background-color: #222222;
   color: #fff;
   border: none;
@@ -136,5 +135,12 @@ body {
   #scrollToTopBtn {
     padding: 5px 10px;
     font-weight: normal;
+  }
+  .btn {
+    margin-left: 3.3rem;
+    margin-right: 3.3rem;
+  }
+  .corus-img {
+    max-width: 100%;
   }
 }
