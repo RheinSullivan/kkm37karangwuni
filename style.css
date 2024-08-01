@@ -129,7 +129,9 @@ body {
   display: none;
   margin-left: 60px;
 }
-#faculty,
+#faculty {
+  background-color: red;
+}
 .carousel-indicators [data-bs-target] {
   background-color: #353535;
 }
