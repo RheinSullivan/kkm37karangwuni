@@ -650,26 +650,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Scroll To Top JS -->
-    <script>
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      }
-
-      function scrollToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
     <!-- FormJS -->
     <script>
       gsap.from(".umc-thumbnail", { duration: 2, rotationX: 360 });
