@@ -60,15 +60,15 @@
               <div class="badge mb-3">
                 <div class="text-uppercase tanggal fw-bolder fs-6" style="color: #ffa500"><span style="color: #00d300">03 Agustus</span> - <span style="color: #ff0000">10 September</span> 2024</div>
               </div>
-              <div class="fs-5 fw-bold">1 more days and we're coming soon!!!</div>
+              <div class="fs-5 fw-bold">We're already here, bro!</div>
               <h1 class="fw-bolder">
                 <span class="text-gradient d-inline fs-1">KKM 37 : KARANGWUNI</span>
               </h1>
               <h1 class="lead fs-4 fw-bold">UNIVERSITAS MUHAMMDIYAH CIREBON</h1>
             </div>
             <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xxl-start mb-3">
-              <a class="btn btn-lg px-5 py-3 fs-6 fw-bolder rounded-pill" style="background-color: #ff0000; color: #fff" href="#faculty">Organization Structure </a>
-              <a class="jumbotron-btn btn-outline-light btn-lg px-5 py-3 fs-6 rounded-pill fw-bolder" href="#documentation">Documentation</a>
+              <a href="#faculty"><button type="button" class="btn-lg px-5 py-3 fs-6 fw-bolder rounded-pill" style="background-color: #ff0000; color: #fff">Organization Structure</button></a>
+              <a href="#documentation"><button type="button" class="jumbotron-btn btn-outline-light btn-lg px-5 py-3 fs-6 rounded-pill fw-bolder">Documentation</button></a>
             </div>
           </div>
           <div class="col-xxl-7">
@@ -602,7 +602,7 @@
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31688.31348347496!2d108.57318794296323!3d-6.8859099028308375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f1a9f5ffdd36f%3A0xe7ef90ba42aad3f3!2sKarangwuni%2C%20Kec.%20Sedong%2C%20Kabupaten%20Cirebon%2C%20Jawa%20Barat%2C%20Indonesia!5e0!3m2!1sid!2ssg!4v1722231523797!5m2!1sid!2ssg"
             width="1000"
             height="450"
-            style="border: 0"
+            style="border-radius: 15px"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
@@ -629,10 +629,10 @@
     <!-- Bottom Music -->
     <div class="container">
       <div id="music-title"><h6>For Revenge : Serana</h6></div>
-      <div id="music-control">
+      <button type="button" id="music-control">
         <i class="bi bi-play-fill" id="play-icon"></i>
         <i class="bi bi-pause-fill d-none" id="pause-icon"></i>
-      </div>
+      </button>
       <audio id="audio" autoplay loop>
         <source src="./img/For Revenge - Serana.mp3" type="audio/mp3" />
         Your browser does not support the audio element.
@@ -640,7 +640,7 @@
       <div class="row gx-lg-5 align-items-center"></div>
     </div>
     <!-- Scroll to Top -->
-    <button id="scrollToTopBtn" onclick="scrollToTop()"><i class="bx bxs-chevron-up bx-sm"></i></button>
+    <button type="button" id="scrollToTopBtn" onclick="scrollToTop()"><i class="bx bx-up-arrow-alt"></i></button>
     <!-- Javascript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="./js/script.js"></script>
@@ -650,26 +650,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Scroll To Top JS -->
-    <script>
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-          scrollToTopBtn.style.display = "block";
-        } else {
-          scrollToTopBtn.style.display = "none";
-        }
-      }
-
-      function scrollToTop() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
     <!-- FormJS -->
     <script>
       gsap.from(".umc-thumbnail", { duration: 2, rotationX: 360 });
@@ -727,7 +707,6 @@
           .catch((error) => console.error("Error!", error.message));
       });
     </script>
-
     <script type="text/javascript" src="js/vanilla-tilt.min.js"></script>
     <script type="text/javascript">
       VanillaTilt.init(document.querySelectorAll(".keyboard-box"), {
