@@ -78,3 +78,24 @@ function scrollToTop() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// Form Contact
+const scriptURL = "https://script.google.com/macros/s/AKfycbwwX0WmGBqXChKjm0V9hNrvRS0T5eUw2DWgFaGCFvfofyHvuEvzmoqNO-sbuo_kIcj-/exec";
+const form = document.forms["rheinsullivan-contact-form"];
+const btnSend = document.querySelector(".btn-send");
+const btnLoading = document.querySelector(".btn-loading");
+const myAlert = document.querySelector(".my-alert");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  btnLoading.classList.toggle("d-none");
+  btnSend.classList.toggle("d-none");
+  fetch(scriptURL, { method: "POST", body: new FormData(form) })
+    .then((response) => {
+      btnLoading.classList.toggle("d-none");
+      btnSend.classList.toggle("d-none");
+      myAlert.classList.toggle("d-none");
+      form.reset();
+      console.log("Success!", response);
+    })
+    .catch((error) => console.error("Error!", error.message));
+});

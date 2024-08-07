@@ -16,6 +16,9 @@ body {
   opacity: 50;
   color: #fff;
 }
+.blur {
+  backdrop-filter: blur(2px);
+}
 .jumbotron-text,
 .corus {
   text-shadow: 0px 0px 4px #000;
@@ -24,8 +27,8 @@ body {
   text-shadow: 0px 0px 0px #000;
 }
 .jumbotron-btn {
-  background: black;
-  color: red;
+  background: #444;
+  color: white;
 }
 .navbar-brand {
   margin-left: 9rem;
@@ -47,7 +50,7 @@ body {
   width: 100%;
 }
 .nav-item .a:hover {
-  color: black;
+  color: #444;
 }
 .navbar-nav .nav-link {
   position: relative;
@@ -89,7 +92,7 @@ body {
   color: white;
 }
 .bttm-hov:hover {
-  background: black;
+  background: #444;
   color: white;
 }
 .nav-hov {
@@ -98,7 +101,7 @@ body {
   border-radius: 5rem;
 }
 .nav-hov:hover {
-  background: black;
+  background: #444;
   color: white;
 }
 form {
@@ -178,7 +181,7 @@ form {
 }
 #music-title {
   position: fixed;
-  bottom: 55px;
+  bottom: 51px;
   left: 50px;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
@@ -186,6 +189,12 @@ form {
   border-radius: 5px;
   display: none;
   margin-left: 60px;
+  backdrop-filter: blur(4px);
+}
+#music-title h6,
+#music-control i {
+  font-size: 20px;
+  font-weight: 800;
 }
 #faculty {
   background-color: red;
@@ -257,10 +266,12 @@ form {
     left: 20px;
   }
   #music-title {
-    bottom: 25px;
+    bottom: 24px;
     left: 20px;
   }
-  #music-title h6 {
-    bottom: 25px;
+  #music-title h6,
+  #music-control i {
+    font-size: 15px;
+    font-weight: 700;
   }
 }
