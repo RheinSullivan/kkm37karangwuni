@@ -101,6 +101,64 @@ body {
   background: black;
   color: white;
 }
+form {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 0%;
+  align-items: flex-start;
+  row-gap: 1.5rem;
+  padding-top: 50px;
+  padding-bottom: 80px;
+  border-radius: 15px;
+  border-width: 1px;
+}
+.form-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  justify-content: flex-start;
+  gap: 16px;
+  width: 650px;
+  opacity: 0.8;
+}
+.form-input {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  width: 100%;
+  gap: 16px;
+}
+.form-control {
+  margin-bottom: 15px;
+  line-height: 1.5;
+  background: white;
+  border: 2px solid #fff;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.form-control:focus {
+  border-color: #000;
+  color: #000;
+}
+.form-control::placeholder {
+  color: #fff;
+}
+.form-control:focus::placeholder {
+  color: #000;
+}
+.btn-contact {
+  background: #444;
+  border-radius: 5rem;
+  cursor: pointer;
+  color: white;
+}
+.btn-success:disabled {
+  background-color: #10ca00;
+  border-color: #fff;
+  border-radius: 5rem;
+  color: white;
+}
 #music-control {
   position: fixed;
   bottom: 50px;
@@ -190,6 +248,9 @@ body {
   }
   .profile-img {
     width: 300px;
+  }
+  .form-card {
+    width: 100%;
   }
   #music-control {
     bottom: 20px;

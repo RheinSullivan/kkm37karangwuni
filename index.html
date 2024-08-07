@@ -26,7 +26,7 @@
     <!-- Header & Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark shadow" style="background-color: #ff0000">
       <div class="container mx-5">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
           <img src="./img/kkm-logo.png" alt="" class="navbar-img" />
           <span class="ps-lg-3 fw-bold fs-5 hide-on-mobile">KKM : 37 KARANGWUNI</span>
         </a>
@@ -35,17 +35,20 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item px-3 pt-2">
+            <li class="nav-item px-2 pt-2">
               <a class="nav-link fw-bold active" aria-current="page" href="#hero">Home</a>
             </li>
-            <li class="nav-item px-3 pt-2">
+            <li class="nav-item px-2 pt-2">
               <a class="nav-link fw-bold" href="#aboutus">About</a>
             </li>
-            <li class="nav-item px-3 pt-2">
+            <li class="nav-item px-2 pt-2">
               <a class="nav-link fw-bold" href="#faculty">Organization Structure</a>
             </li>
+            <li class="nav-item px-2 pt-2">
+              <a class="nav-link fw-bold" href="#documentation">Documentation</a>
+            </li>
             <li class="nav-item ps-lg-5">
-              <a class="nav-link" href="#documentation"><button type="button" class="nav-hov fw-bold py-2 px-4">Documentation</button></a>
+              <a class="nav-link" href="#contact"><button type="button" class="nav-hov fw-bold py-2 px-4">Contact Us</button></a>
             </li>
           </ul>
         </div>
@@ -589,12 +592,33 @@
         ></path>
       </svg>
     </section>
-    <!-- Maps -->
-    <section id="peta" style="background: red">
+    <!-- Contact & Maps -->
+    <section id="contact" style="background: red">
       <div class="container">
-        <div class="row text-center mb-3" style="color: black">
-          <div class="col mb-5">
-            <h1 class="fs-1 fw-bold fst-italic"><span style="color: white">Lokasi </span><span>KKM Kelompok 37</span></h1>
+        <div class="row mb-5">
+          <h1 class="fs-1 fw-bolder mb-3 text-center" style="color: black">Contact <span class="text-white">Us </span></h1>
+          <div class="row justify-content-center mb-5">
+            <div class="col-md-6">
+              <div class="alert alert-success alert-dismissible fade show d-none my-alert mt-5" role="alert">
+                <strong>Thank You, Bro!</strong> Your message has been received.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+              <form name="rheinsullivan-contact-form" class="fw-bold" style="color: black">
+                <div class="form-card">
+                  <div class="form-input">
+                    <input type="text" id="name" name="fullname" aria-describedby="name" class="form-control bg-transparent fw-bold" placeholder="Full Name :" />
+                    <input type="email" id="email" name="email" aria-describedby="email" class="form-control bg-transparent fw-bold" placeholder="Email :" />
+                    <input type="text" id="subject" name="subject" aria-describedby="subject" class="form-control bg-transparent fw-bold" placeholder="Subject :" />
+                    <textarea name="message" id="message" class="form-control bg-transparent fw-bold" rows="5" placeholder="Message :"></textarea>
+                  </div>
+                </div>
+                <button type="submit" type="button" class="btn-contact py-2 px-4 fw-bold btn-send">Send Message</button>
+                <button class="btn-success py-2 px-4 fw-bold btn-loading d-none" type="button" disabled>
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
+              </form>
+            </div>
           </div>
         </div>
         <div class="map d-flex justify-content-center">
@@ -615,7 +639,7 @@
       <div class="container px-5 fw-bold text-white">
         <div class="row align-items-center justify-content-between flex-column flex-sm-row">
           <div class="col-auto">
-            <div class="small m-0">Copyright &copy; Kelompok 37 : Karangwuni</div>
+            <div class="small m-0"><a href="https://rheinsullivan.vercel.app/" class="text-decoration-none text-white">Copyright &copy; 2024</a> Kelompok 37 : Karangwuni</div>
           </div>
           <div class="col-auto">
             <a class="text-gradient px-3" href="https://www.instagram.com/kkm37_karangwuni/" aria-label="Instagram"> <img src="./img/instagram-white.png" alt="Instagram" /> </a
@@ -650,7 +674,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
     <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- FormJS -->
+    <!-- Script AOS-->
     <script>
       gsap.from(".umc-thumbnail", { duration: 2, rotationX: 360 });
       gsap.from(".navbar", { duration: 1.5, opacity: 0, y: "-100%" });
@@ -684,10 +708,10 @@
         duration: 3000,
       });
     </script>
-    <!-- Vanilla-tilt -->
+    <!-- Form Contact -->
     <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbzjWwvjJihKz3-24SxEnHM5XFjNPgQd_dv3uD_fgjLSp_4AAXsC6IC4C_ECvWyLkGsuBg/exec";
-      const form = document.forms["umc-contact-form"];
+      const scriptURL = "https://script.google.com/macros/s/AKfycbwwX0WmGBqXChKjm0V9hNrvRS0T5eUw2DWgFaGCFvfofyHvuEvzmoqNO-sbuo_kIcj-/exec";
+      const form = document.forms["rheinsullivan-contact-form"];
       const btnSend = document.querySelector(".btn-send");
       const btnLoading = document.querySelector(".btn-loading");
       const myAlert = document.querySelector(".my-alert");
